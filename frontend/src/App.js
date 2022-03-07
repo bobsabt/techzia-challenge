@@ -11,7 +11,6 @@ function App() {
   const [user, setUser] = React.useState([]);
   const [isLogged, setIsLogged] = React.useState(false);
 
-
   const getAlbums = () => {
     fetch("https://jsonplaceholder.typicode.com/albums")
       .then((response) => response.json())
@@ -43,12 +42,21 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Navbar isLogged={isLogged} user={user}/>
+        <Navbar isLogged={isLogged} user={user} />
         <main>
           <Routes>
-            <Route path="/" element={<Dashboard albums={albums}/>} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/profil" element={<Profile />} />
+            <Route path="/" element={<Dashboard albums={albums} />} />
+            <Route
+              path="/login"
+              element={
+                <Login
+                  users={users}
+                  setIsLogged={setIsLogged}
+                  setUser={setUser}
+                />
+              }
+            />
+            <Route path="/profil" element={<Profile user={user} />} />
           </Routes>
         </main>
       </div>

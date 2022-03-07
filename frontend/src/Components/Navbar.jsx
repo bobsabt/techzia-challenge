@@ -12,7 +12,7 @@ const Navbar = ({ user, isLogged }) => {
         </Link>
         {isLogged ? (
           <Link to="/profil">
-            <button class="button is-primary">{username}</button>
+            <button className="button is-primary">{username}</button>
           </Link>
         ) : (
           <Link to="/login">
