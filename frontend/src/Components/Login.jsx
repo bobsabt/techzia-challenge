@@ -30,7 +30,7 @@ const Login = ({ users, setIsLogged, setUser }) => {
           { name: "Geo - long", value: users[i].address.geo.lng },
           { name: "Company name", value: users[i].company.name },
           { name: "CatchPhrase", value: users[i].company.catchPhrase },
-          { name: "Bs", value: users[i].company.catchPhrase.bs },
+          { name: "Bs", value: users[i].company.bs },
         ];
       }
     }

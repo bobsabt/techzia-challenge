@@ -5,11 +5,14 @@ const Navbar = ({ user, isLogged }) => {
   const username = user.length > 0 ? user[1].value : null;
 
   return (
-    <div>
+    <>
       <nav className="navbar" aria-label="main navigation">
+        <div class="navbar-brand">
         <Link to="/">
-          <h2 className="title is-2">Title </h2>
+          <h2 className="title">MyTask</h2>
         </Link>
+        </div>
+        <div className="navbar-start">
         {isLogged ? (
           <Link to="/profil">
             <button className="button is-primary">{username}</button>
@@ -19,8 +22,9 @@ const Navbar = ({ user, isLogged }) => {
             <button className="button is-primary">Login</button>
           </Link>
         )}
+        </div>
       </nav>
-    </div>
+    </>
   );
 };
 

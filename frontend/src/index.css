@@ -8,9 +8,26 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+  
+.navbar, .navbar-brand{
+  background-color: transparent;
+  color:white;
+  align-items: center;
+  height: 80px;
+}
+
+.title{
+  color:white;
+  margin-left: 50px;
+}
+
+.navbar-start{
+  margin-right: 50px;
 }
