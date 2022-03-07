@@ -1,17 +1,14 @@
 import React from "react";
-import TbodyBP from "./TbodyBP";
+import TbodyContent from "./TbodyContent";
 
 const Profil = ({ user }) => {
-
   return (
     <div>
       <table class="table">
         <tbody>
-          {user.map((item, index) => <TbodyBP key={index}
-            name={item.name}
-            value={item.value}
-            />
-            )}
+          {user.map((item, index) => (
+            <TbodyContent key={index} name={item.name} value={item.value} />
+          ))}
         </tbody>
       </table>
     </div>
