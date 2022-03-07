@@ -8,7 +8,7 @@ const Card = ({ title, albumid, userid }) => {
   };
 
   return (
-    <div>
+    <>
       <div className="card">
         <header className="card-header">
           <p className="card-header-title">{title}</p>
@@ -31,7 +31,7 @@ const Card = ({ title, albumid, userid }) => {
           </div>
         )}
       </div>
-    </div>
+    </>
   );
 };
 

@@ -53,7 +53,6 @@ const Login = ({ users, setIsLogged, setUser }) => {
 
   return (
     <div>
-      <h1> Login</h1>
       <form className="box" onSubmit={handleSubmit}>
         <div className="field">
           <label className="label">User name</label>

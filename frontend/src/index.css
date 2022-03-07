@@ -10,7 +10,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: black;
 }
-
+.App{
+  min-height: 100vh;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -18,16 +20,45 @@ code {
   
 .navbar, .navbar-brand{
   background-color: transparent;
-  color:white;
   align-items: center;
-  height: 80px;
+  min-height: 80px;
 }
 
 .title{
-  color:white;
+  color: #dedede;
   margin-left: 50px;
 }
 
 .navbar-start{
   margin-right: 50px;
 }
+
+.card{
+margin: 10px;
+background-color: #222;
+color: #dedede;
+text-align: center;
+}
+
+.card-header-title{
+  color: #dedede;
+}
+
+.box {
+ max-width: 500px;
+ width: 100%;
+ background-color: #222;
+ color: #dedede;
+ margin: 100px auto;
+
+}
+
+.label{
+  color: #dedede;
+  margin: 20px;
+}
+
+.button{
+  margin-top: 20px;
+}
+
