@@ -7,6 +7,8 @@ import Profile from "./Components/Profile";
 
 function App() {
   const [albums, setAlbums] = React.useState([]);
+  const [users, setUsers] = React.useState([]);
+  const [user, setUser] = React.useState([]);
   const [isLogged, setIsLogged] = React.useState(false);
 
 
@@ -21,15 +23,27 @@ function App() {
       });
   };
 
+  const getUsers = () => {
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then((response) => response.json())
+      .then((data) => {
+        setUsers(data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   React.useEffect(() => {
     getAlbums();
+    getUsers();
     document.title = "ProbaTask";
   }, []);
 
   return (
     <BrowserRouter>
       <div className="App">
-        <Navbar isLogged={isLogged}/>
+        <Navbar isLogged={isLogged} user={user}/>
         <main>
           <Routes>
             <Route path="/" element={<Dashboard albums={albums}/>} />

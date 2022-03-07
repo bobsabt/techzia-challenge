@@ -1,9 +1,21 @@
-import React from 'react'
+import React from "react";
+import TbodyBP from "./TbodyBP";
 
-const Profile = () => {
+const Profil = ({ user }) => {
+
   return (
-    <div>Profile</div>
-  )
-}
+    <div>
+      <table class="table">
+        <tbody>
+          {user.map((item, index) => <TbodyBP key={index}
+            name={item.name}
+            value={item.value}
+            />
+            )}
+        </tbody>
+      </table>
+    </div>
+  );
+};
 
-export default Profile
+export default Profil;
