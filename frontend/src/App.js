@@ -10,7 +10,7 @@ function App() {
   const [user, setUser] = React.useState([]);
   const [isLogged, setIsLogged] = React.useState(false);
 
-  const { albums=[], users = [] } = useData();
+  const { albums = [], users = [] } = useData();
 
   return (
     <BrowserRouter>
