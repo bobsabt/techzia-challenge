@@ -3,7 +3,7 @@ import TbodyContent from "./TbodyContent";
 
 const Profil = ({ user }) => {
   return (
-    <div>
+    <>
       <table className="table">
         <tbody>
           {user.map((item, index) => (
@@ -11,7 +11,7 @@ const Profil = ({ user }) => {
           ))}
         </tbody>
       </table>
-    </div>
+    </>
   );
 };
 

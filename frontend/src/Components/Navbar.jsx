@@ -15,7 +15,7 @@ const Navbar = ({ user, isLogged }) => {
         <div className="navbar-end">
           {isLogged ? (
             <Link to="/profil">
-              <h3 className="title is-primary">{username}</h3>
+              <button className="user">{username}</button>
             </Link>
           ) : (
             <Link to="/login">

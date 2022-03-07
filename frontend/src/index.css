@@ -1,90 +1,112 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma-rtl.min.css";
-@import '@fortawesome/fontawesome-free/css/all.min.css';
+@import "@fortawesome/fontawesome-free/css/all.min.css";
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: black;
 }
-.App{
+.App {
   min-height: 100vh;
 }
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-  
-.navbar{
+
+.navbar {
   background-color: transparent;
   align-items: center;
   min-height: 80px;
   flex-wrap: wrap;
   width: 100%;
   justify-content: space-between;
+  margin-bottom: 20px;
 }
 
-.navbar-brand{
+.navbar-brand {
   align-items: center;
   margin-left: 50px;
 }
 
-.navbar-end{
+.navbar-end {
   margin: 0;
 }
 
-.title{
+.title {
+  color: #dedede;
+}
+.user {
+  background-color: transparent;
+  color: #00d1b2;
+  font-size: larger;
+  border: none;
+  margin-right: 50px;
+}
+
+.card {
+  margin: 10px;
+  background-color: #222;
+  color: #dedede;
+  text-align: center;
+  width: 280px;
+  min-height: 100px;
+}
+
+.card-header-title {
+  color: #dedede;
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 500px;
+  height: 100%;
+}
+
+.box,
+table {
+  max-width: 500px;
+  width: 100%;
+  background-color: #222;
+  color: #dedede;
+  margin: 10px;
+}
+
+.field,
+.label {
+  color: #dedede;
+  margin: 40px 0 40px 0;
+}
+
+.button {
+  margin-top: 40px;
+}
+.table {
+  margin: 10px;
+  width: 100%;
+  border-radius: 6px;
+  color: #dedede;
+  background-color: #222;
+}
+
+table th,
+.table th {
   color: #dedede;
 }
 
-.card{
-margin: 10px;
-background-color: #222;
-color: #dedede;
-text-align: center;
-}
-
-.card-header-title{
-  color: #dedede;
-}
-
-.box, table{
- max-width: 500px;
- width: 100%;
- background-color: #222;
- color: #dedede;
- margin: 10px;
-}
-
-.label{
-  color: #dedede;
-  margin: 20px;
-}
-
-.button{
-  margin-top: 20px;
-}
-
-@media screen and (min-width: 1024px){
-  .navbar{
+@media screen and (max-width: 2000px) {
+  .navbar {
     display: flex;
     align-items: center;
   }
 
-  .navbar-end .button{
-    margin: 0 50px 0   0;
-  }
-}
-@media screen and (max-width: 1024px){
-  .navbar{
-    display: flex;
-    align-items: center;
-  }
-
-  .navbar-end .button{
-    margin: 0 50px 0   0;
+  .navbar-end .button {
+    margin: 0 50px 0 0;
   }
 }
