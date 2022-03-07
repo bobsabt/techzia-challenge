@@ -7,6 +7,8 @@ import Profile from "./Components/Profile";
 
 function App() {
   const [albums, setAlbums] = React.useState([]);
+  const [isLogged, setIsLogged] = React.useState(false);
+
 
   const getAlbums = () => {
     fetch("https://jsonplaceholder.typicode.com/albums")
@@ -27,7 +29,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Navbar />
+        <Navbar isLogged={isLogged}/>
         <main>
           <Routes>
             <Route path="/" element={<Dashboard albums={albums}/>} />
