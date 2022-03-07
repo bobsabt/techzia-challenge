@@ -4,40 +4,13 @@ import Navbar from "./Components/Navbar";
 import Dashboard from "./Components/Dashboard";
 import Login from "./Components/Login";
 import Profile from "./Components/Profile";
+import useData from "./Utils/useData";
 
 function App() {
-  const [albums, setAlbums] = React.useState([]);
-  const [users, setUsers] = React.useState([]);
   const [user, setUser] = React.useState([]);
   const [isLogged, setIsLogged] = React.useState(false);
 
-  const getAlbums = () => {
-    fetch("https://jsonplaceholder.typicode.com/albums")
-      .then((response) => response.json())
-      .then((data) => {
-        setAlbums(data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
-
-  const getUsers = () => {
-    fetch("https://jsonplaceholder.typicode.com/users")
-      .then((response) => response.json())
-      .then((data) => {
-        setUsers(data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
-
-  React.useEffect(() => {
-    getAlbums();
-    getUsers();
-    document.title = "ProbaTask";
-  }, []);
+  const { albums=[], users = [] } = useData();
 
   return (
     <BrowserRouter>
