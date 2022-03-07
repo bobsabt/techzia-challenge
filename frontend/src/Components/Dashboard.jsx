@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import Card from "./Card";
 
-const Dashboard = () => {
+const Dashboard = ({ albums }) => {
   return (
-    <div>Dashboard</div>
-  )
-}
+    <div>
+      {albums.map((album, index) => (
+        <Card key={index} title={album.title} albumid={album.id} userid={album.userId} />
+      ))}
+    </div>
+  );
+};
 
-export default Dashboard
+export default Dashboard;
