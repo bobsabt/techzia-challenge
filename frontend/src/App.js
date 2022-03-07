@@ -41,7 +41,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className="App">
+      <div className="App container is-fullhd">
         <Navbar isLogged={isLogged} user={user} />
         <main>
           <Routes>

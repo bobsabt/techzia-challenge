@@ -52,8 +52,9 @@ const Login = ({ users, setIsLogged, setUser }) => {
   };
 
   return (
-    <div>
+    <>
       <form className="box" onSubmit={handleSubmit}>
+
         <div className="field">
           <label className="label">User name</label>
           <div className="control">
@@ -100,7 +101,7 @@ const Login = ({ users, setIsLogged, setUser }) => {
           Login
         </button>
       </form>
-    </div>
+    </>
   );
 };
 

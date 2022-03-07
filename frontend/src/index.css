@@ -18,19 +18,26 @@ code {
     monospace;
 }
   
-.navbar, .navbar-brand{
+.navbar{
   background-color: transparent;
   align-items: center;
   min-height: 80px;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.navbar-brand{
+  align-items: center;
+  margin-left: 50px;
+}
+
+.navbar-end{
+  margin: 0;
 }
 
 .title{
   color: #dedede;
-  margin-left: 50px;
-}
-
-.navbar-start{
-  margin-right: 50px;
 }
 
 .card{
@@ -44,13 +51,12 @@ text-align: center;
   color: #dedede;
 }
 
-.box {
+.box, table{
  max-width: 500px;
  width: 100%;
  background-color: #222;
  color: #dedede;
- margin: 100px auto;
-
+ margin: 10px;
 }
 
 .label{
@@ -62,3 +68,23 @@ text-align: center;
   margin-top: 20px;
 }
 
+@media screen and (min-width: 1024px){
+  .navbar{
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-end .button{
+    margin: 0 50px 0   0;
+  }
+}
+@media screen and (max-width: 1024px){
+  .navbar{
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-end .button{
+    margin: 0 50px 0   0;
+  }
+}

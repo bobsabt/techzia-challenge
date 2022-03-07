@@ -7,21 +7,21 @@ const Navbar = ({ user, isLogged }) => {
   return (
     <>
       <nav className="navbar" aria-label="main navigation">
-        <div class="navbar-brand">
-        <Link to="/">
-          <h2 className="title">MyTask</h2>
-        </Link>
+        <div className="navbar-brand">
+          <Link to="/">
+            <h2 className="title">MyTask</h2>
+          </Link>
         </div>
-        <div className="navbar-start">
-        {isLogged ? (
-          <Link to="/profil">
-            <button className="button is-primary">{username}</button>
-          </Link>
-        ) : (
-          <Link to="/login">
-            <button className="button is-primary">Login</button>
-          </Link>
-        )}
+        <div className="navbar-end">
+          {isLogged ? (
+            <Link to="/profil">
+              <h3 className="title is-primary">{username}</h3>
+            </Link>
+          ) : (
+            <Link to="/login">
+              <button className="button is-primary">Login</button>
+            </Link>
+          )}
         </div>
       </nav>
     </>
