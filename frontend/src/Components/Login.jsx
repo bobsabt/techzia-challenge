@@ -11,6 +11,7 @@ const Login = ({ users, setIsLogged, setUser }) => {
   const onClickLogin = (inputuser, inputpassword) => {
     let existUser = false;
     let oneUser = [];
+    console.log(users)
 
     for (let i = 0; i < users.length; i++) {
       if (users[i].username.toUpperCase() === inputuser.toUpperCase()) {
@@ -34,6 +35,9 @@ const Login = ({ users, setIsLogged, setUser }) => {
         ];
       }
     }
+    console.log(inputpassword)
+    console.log(existUser)
+    console.log(typeof(inputpassword))
 
     if (existUser && inputpassword === "123456") {
       setTimeout(() => {
