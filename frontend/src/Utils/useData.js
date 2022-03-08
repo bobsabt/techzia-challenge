@@ -21,7 +21,7 @@ const useData = () => {
       .catch((error) => {
         console.log(error);
       });
-    document.title = "ProbaTask";
+    document.title = "TestTask";
   }, []);
 
   return { albums, users };

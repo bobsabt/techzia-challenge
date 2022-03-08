@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const Login = ({ users, setIsLogged, setUser }) => {
+const Login = ({ users, setIsLoggedIn, setUser }) => {
   const [userName, setUserName] = React.useState("");
   const [password, setPassword] = React.useState("");
   const [isSuccess, setIsSuccess] = React.useState(true);
@@ -9,12 +9,12 @@ const Login = ({ users, setIsLogged, setUser }) => {
   let navigate = useNavigate();
 
   const onClickLogin = (inputuser, inputpassword) => {
-    let existUser = false;
+    let userExists = false;
     let oneUser = [];
 
     for (let i = 0; i < users.length; i++) {
       if (users[i].username.toUpperCase() === inputuser.toUpperCase()) {
-        existUser = true;
+        userExists = true;
         oneUser = [
           { name: "Id", value: users[i].id },
           { name: "Username", value: users[i].username },
@@ -35,10 +35,10 @@ const Login = ({ users, setIsLogged, setUser }) => {
       }
     }
 
-    if (existUser && inputpassword === "123456") {
+    if (userExists && inputpassword === "123456") {
       setTimeout(() => {
         navigate("/");
-        setIsLogged(true);
+        setIsLoggedIn(true);
         setUser(oneUser);
       }, 500);
     } else {
@@ -95,7 +95,7 @@ const Login = ({ users, setIsLogged, setUser }) => {
             </p>
           </div>
         </div>
-        {!isSuccess && <p>Wrong username/passwrod</p>}
+        {!isSuccess && <p>Wrong username/password</p>}
         <button className="button is-primary" type="submit">
           Login
         </button>

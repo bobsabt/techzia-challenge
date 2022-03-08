@@ -8,14 +8,14 @@ import useData from "./Utils/useData";
 
 function App() {
   const [user, setUser] = React.useState([]);
-  const [isLogged, setIsLogged] = React.useState(false);
+  const [isLoggedIn, setIsLoggedIn] = React.useState(false);
 
   const { albums = [], users = [] } = useData();
 
   return (
     <BrowserRouter>
       <div className="App container is-fullhd">
-        <Navbar isLogged={isLogged} user={user} />
+        <Navbar isLogged={isLoggedIn} user={user} />
         <main>
           <Routes>
             <Route path="/" element={<Dashboard albums={albums} />} />
@@ -24,7 +24,7 @@ function App() {
               element={
                 <Login
                   users={users}
-                  setIsLogged={setIsLogged}
+                  setIsLoggedIn={setIsLoggedIn}
                   setUser={setUser}
                 />
               }
