@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/techzia-challenge/static/css/main.6df876c3.css",
-    "main.js": "/techzia-challenge/static/js/main.32371b92.js",
+    "main.js": "/techzia-challenge/static/js/main.46ff338a.js",
     "static/js/787.cda612ba.chunk.js": "/techzia-challenge/static/js/787.cda612ba.chunk.js",
     "static/media/fa-solid-900.ttf": "/techzia-challenge/static/media/fa-solid-900.79da213423ac0def2058.ttf",
     "static/media/fa-brands-400.ttf": "/techzia-challenge/static/media/fa-brands-400.0a1b701f5563c2288281.ttf",
@@ -13,11 +13,11 @@
     "static/media/fa-v4compatibility.woff2": "/techzia-challenge/static/media/fa-v4compatibility.3d503f89ccaf1b224aa5.woff2",
     "index.html": "/techzia-challenge/index.html",
     "main.6df876c3.css.map": "/techzia-challenge/static/css/main.6df876c3.css.map",
-    "main.32371b92.js.map": "/techzia-challenge/static/js/main.32371b92.js.map",
+    "main.46ff338a.js.map": "/techzia-challenge/static/js/main.46ff338a.js.map",
     "787.cda612ba.chunk.js.map": "/techzia-challenge/static/js/787.cda612ba.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6df876c3.css",
-    "static/js/main.32371b92.js"
+    "static/js/main.46ff338a.js"
   ]
 }
