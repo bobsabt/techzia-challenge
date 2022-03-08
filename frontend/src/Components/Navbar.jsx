@@ -8,7 +8,7 @@ const Navbar = ({ user, isLogged }) => {
     <>
       <nav className="navbar" aria-label="main navigation">
         <div className="navbar-brand">
-          <Link to="/">
+          <Link to="/techzia-challenge">
             <h2 className="title">MyTask</h2>
           </Link>
         </div>

@@ -37,7 +37,7 @@ const Login = ({ users, setIsLoggedIn, setUser }) => {
 
     if (userExists && inputpassword === "123456") {
       setTimeout(() => {
-        navigate("/");
+        navigate("/techzia-challenge");
         setIsLoggedIn(true);
         setUser(oneUser);
       }, 500);

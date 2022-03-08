@@ -18,7 +18,7 @@ function App() {
         <Navbar isLogged={isLoggedIn} user={user} />
         <main>
           <Routes>
-            <Route path="/" element={<Dashboard albums={albums} />} />
+            <Route path="/techzia-challenge" element={<Dashboard albums={albums} />} />
             <Route
               path="/login"
               element={
