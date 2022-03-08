@@ -7,21 +7,21 @@ const useData = () => {
   const BASE_URL = "https://jsonplaceholder.typicode.com";
 
   React.useEffect(() => {
-    (async()=>{
-      try{
+    (async () => {
+      try {
         const response = await axios.get(`${BASE_URL}/albums`);
-        setAlbums(await response.data)
-      }catch(error){
-        console.log(error)
+        setAlbums(await response.data);
+      } catch (error) {
+        console.log(error);
       }
     })();
-    (async()=>{
-      try{
-      const response = await axios.get(`${BASE_URL}/users`);
-      setUsers(await response.data)
-    }catch(error){
-      console.log(error)
-    }
+    (async () => {
+      try {
+        const response = await axios.get(`${BASE_URL}/users`);
+        setUsers(await response.data);
+      } catch (error) {
+        console.log(error);
+      }
     })();
     document.title = "TestTask";
   }, []);
