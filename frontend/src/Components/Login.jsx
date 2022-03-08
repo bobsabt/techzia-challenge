@@ -11,7 +11,7 @@ const Login = ({ users, setIsLoggedIn, setUser }) => {
   const onClickLogin = (inputuser, inputpassword) => {
     let userExists = false;
     let oneUser = [];
-
+    
     for (let i = 0; i < users.length; i++) {
       if (users[i].username.toUpperCase() === inputuser.toUpperCase()) {
         userExists = true;
